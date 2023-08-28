@@ -343,7 +343,7 @@ sort.result <- function(result, by='BIC'){
   if (by == 'AIC'){
     result <- result[order(result$AIC,decreasing = F),]
   }
-  if (by == 'LR'){
+  if (by == 'LL'){
     result <- result[order(result$logLR,decreasing = T),]
   }
   #return
