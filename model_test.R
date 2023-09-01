@@ -273,6 +273,17 @@ generate.RS.comb <- function(
   return(result.final)
 }
 
+# explore.models: main function to explore candidate models
+# data: Data frame containing data to be used
+# fixed.equation: an R formular describing the dependent variable and fixed effects.
+# group: a name of group variable to be used for MLM
+ # if Null: fixed effects only model
+# slopes: names of random slope variables
+ # all slope variables should also be included in fixed effects
+ # if Null: random intercept only model
+# must: names of variables that should be included in all candidate models
+# cores: the number of cores to be used for multiprocessing
+
 explore.models <- function(data,fixed.equation, group = NULL, slopes = NULL,
                            must= NULL,
                            cores=1
